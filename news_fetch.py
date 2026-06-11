@@ -2,22 +2,40 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-url = "https://www.bbc.com/news"
+sites = [
 
-response = requests.get(url)
+    "https://www.bbc.com/news",
 
-soup = BeautifulSoup(
-    response.text,
-    "html.parser"
-)
+    "https://www.reuters.com/world",
+
+    "https://edition.cnn.com/world"
+
+]
 
 headlines = []
 
-for headline in soup.find_all("h2")[:5]:
+for site in sites:
 
-    headlines.append(
-        headline.get_text()
-    )
+    try:
+
+        response = requests.get(site)
+
+        soup = BeautifulSoup(
+            response.text,
+            "html.parser"
+        )
+
+        for h in soup.find_all(
+            ["h1","h2","h3"]
+        )[:3]:
+
+            headlines.append(
+                h.get_text().strip()
+            )
+
+    except:
+
+        pass
 
 with open(
     "news.json",
@@ -32,4 +50,4 @@ with open(
         ensure_ascii=False
     )
 
-print("News updated")
+print("News Updated")

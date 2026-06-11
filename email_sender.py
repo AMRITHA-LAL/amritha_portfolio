@@ -1,37 +1,46 @@
+import json
 import smtplib
+
 from email.message import EmailMessage
 
 sender = "kavyakannan2020@gmail.com"
 
-receiver = "kimjeonkavya@gmail.com"
+password = "zaiy ryml zfqy ecqk"
 
-app_password = "zaiy ryml zfqy ecqk"
+with open(
+    "news.json",
+    "r",
+    encoding="utf-8"
+) as file:
+
+    news = json.load(file)
+
+html = """
+<h2>
+Morning News Digest
+</h2>
+<ul>
+"""
+
+for item in news:
+
+    html += f"<li>{item}</li>"
+
+html += "</ul>"
 
 msg = EmailMessage()
 
-msg["Subject"] = "Portfolio Automation Test"
+msg["Subject"] = (
+    "Morning News Digest"
+)
 
 msg["From"] = sender
 
-msg["To"] = receiver
+msg["To"] = sender
 
-msg.set_content(
-"""
-Hello Kavya,
-
-This email was sent automatically using Python.
-
-Project:
-Smart Portfolio Automation
-
-Features:
-- GitHub Automation
-- News Fetching
-- Email Automation
-
-Regards,
-Python Bot
-"""
+msg.add_alternative(
+    html,
+    subtype="html"
 )
 
 with smtplib.SMTP_SSL(
@@ -41,13 +50,9 @@ with smtplib.SMTP_SSL(
 
     smtp.login(
         sender,
-        app_password
+        password
     )
 
-    smtp.send_message(
-        msg
-    )
+    smtp.send_message(msg)
 
-print(
-    "Email sent successfully"
-)
+print("News Email Sent")

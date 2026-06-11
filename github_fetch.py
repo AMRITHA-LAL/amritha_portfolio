@@ -21,7 +21,11 @@ if response.status_code == 200:
             "url": repo["html_url"]
         })
 
-    with open("projects.json","w") as file:
+    with open(
+        "projects.json",
+        "w",
+        encoding="utf-8"
+    ) as file:
 
         json.dump(
             projects,
@@ -29,11 +33,8 @@ if response.status_code == 200:
             indent=4
         )
 
-    print("Projects updated")
+    print("Projects Updated")
 
 else:
 
-    print(
-        "Error:",
-        response.status_code
-    )
+    print("GitHub API Error")

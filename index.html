@@ -1,127 +1,251 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>
-Smart Portfolio Automation
-</title>
-
-<link
-rel="stylesheet"
-href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amritha Lal | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="hero">
+    <!-- HERO SECTION -->
+    <header class="hero">
 
-<h1>
-Smart Portfolio Automation
-</h1>
+        <div class="hero-content">
+            <img src="profile.jpeg" alt="Amritha Lal" class="profile-image">
+            <h3>Hello, I'm</h3>
+            <h1>Amritha Lal</h1>
 
-<p class="subtitle">
-GitHub Projects • News Automation • Email Automation
-</p>
+            <p class="subtitle">
+                BTech Computer Science and Engineering Student
+            </p>
 
-</header>
+            <p class="description">
+                Passionate about AI, UI/UX Design, Web Development,
+                and creating innovative digital experiences.
+            </p>
 
-<!-- ABOUT PROJECT -->
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+        </div>
 
-<section>
+    </header>
 
-<h2>
-About This Project
-</h2>
+    <!-- ABOUT -->
 
-<div class="project-card">
+    <section id="about">
 
-<h3>
-Smart Portfolio Automation
-</h3>
+        <h2>About Me</h2>
 
-<p>
-A Python-based automation system that combines:
-</p>
+        <p>
+            I am a BTech Computer Science and Engineering student passionate
+            about Artificial Intelligence, UI/UX Design,
+            Web Development, and modern technologies.
+            I enjoy creating user-friendly digital products
+            and continuously learning new skills.
+        </p>
 
-<br>
+    </section>
 
-<p>✅ GitHub API Integration</p>
-<p>✅ News Headline Fetching</p>
-<p>✅ Gmail Email Automation</p>
-<p>✅ GitHub Pages Deployment</p>
+    <!-- SKILLS -->
 
-<br>
+    <section id="skills">
 
-<p>
-The system automatically updates project data, retrieves current news headlines, and sends emails using Python SMTP.
-</p>
+        <h2>Skills</h2>
 
-</div>
+        <div class="skills-container">
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">Figma</div>
+
+            <div class="skill">UI/UX Design</div>
+
+            <div class="skill">AI Tools</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECT -->
+
+    <section id="projects">
+    <h2>Featured Project</h2>
+
+    <div class="project-card">
+
+        <h3>TIDE AI Productivity App</h3>
+
+        <p>
+            A productivity and task management mobile application
+            designed in Figma. Features task organization,
+            AI assistance, calendar integration, and focus tracking.
+        </p>
+
+        <div class="figma-preview">
+
+            <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1);"
+                width="100%"
+                height="500"
+                src="https://embed.figma.com/design/kpO2kgV4t8F4c7UtxzpfM2/Session-1?node-id=0-1&embed-host=share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <a href="https://www.figma.com/design/kpO2kgV4t8F4c7UtxzpfM2/Session-1?node-id=0-1&t=EP7rUoiuEXDJyoT5-1"
+           target="_blank"
+           class="figma-btn">
+           View Full Figma Prototype
+        </a>
+
+    </div>
+</section>
+
+    <!-- BLOG -->
+
+    <section id="blog">
+
+        <h2>Latest Blogs</h2>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+
+                <h3>How I Learned Figma</h3>
+
+                <p class="date">June 2026</p>
+
+                <p>
+                    My journey into UI/UX design started
+                    with learning Figma and creating
+                    mobile app interfaces.
+                </p>
+
+                <a href="#">Read More →</a>
+
+            </div>
+
+            <div class="blog-card">
+
+                <h3>Building TIDE AI</h3>
+
+                <p class="date">June 2026</p>
+
+                <p>
+                    Designing TIDE AI helped me understand
+                    user-centered design and app workflows.
+                </p>
+
+                <a href="#">Read More →</a>
+
+            </div>
+
+            <div class="blog-card">
+
+                <h3>Starting Web Development</h3>
+
+                <p class="date">June 2026</p>
+
+                <p>
+                    Learning HTML and CSS allowed me
+                    to build my first portfolio website.
+                </p>
+
+                <a href="#">Read More →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="gallery">
+
+    <h2>Project Gallery</h2>
+
+    <p id="project-count"></p>
+
+    <div class="filter-buttons">
+
+        <button onclick="filterProjects('all')">
+            All
+        </button>
+
+        <button onclick="filterProjects('design')">
+            Design
+        </button>
+
+        <button onclick="filterProjects('web')">
+            Web
+        </button>
+
+        <button onclick="filterProjects('code')">
+            Code
+        </button>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card design">
+            TIDE AI UI Design
+        </div>
+
+        <div class="gallery-card web">
+            Portfolio Website
+        </div>
+
+        <div class="gallery-card code">
+            JavaScript Calculator
+        </div>
+
+        <div class="gallery-card design">
+            Mobile App Prototype
+        </div>
+
+        <div class="gallery-card web">
+            Landing Page Design
+        </div>
+
+    </div>
 
 </section>
 
-<hr>
+<section id="github-projects">
 
-<!-- GITHUB PROJECTS -->
+    <h2>GitHub Repositories</h2>
 
-<section>
+    <p id="repo-count"></p>
 
-<h2>
-GitHub Projects
-</h2>
-
-<p id="count"></p>
-
-<div id="projects-container">
-</div>
+    <div id="repo-container"></div>
 
 </section>
+    <!-- CONTACT -->
 
-<hr>
+    <section id="contact">
 
-<!-- NEWS -->
+        <h2>Contact</h2>
 
-<section>
+       <div><p>Email: kavyakannan2020@gmail.com</p></div> 
 
-<h2>
-Latest News Headlines
-</h2>
+        <div><p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/amritha-lal-8558aa262"
+       target="_blank">
+       View Profile
+    </a>
+</p></div> 
 
-<div id="news-container">
-</div>
 
-</section>
-
-<hr>
-
-<!-- EMAIL AUTOMATION -->
-
-<section>
-
-<h2>
-Email Automation
-</h2>
-
-<div class="email-box">
-
-<p>
-Automated email sending using Python SMTP.
-</p>
-
-<br>
-
-<p>✅ Gmail Integration</p>
-<p>✅ Automatic Message Delivery</p>
-<p>✅ Tested Successfully</p>
-
-</div>
-
-</section>
+    </section>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>

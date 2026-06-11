@@ -1,7 +1,40 @@
-// ====================
-// GITHUB PROJECTS
-// ====================
+const cards =
+document.querySelectorAll(".gallery-card");
 
+const count =
+document.getElementById("project-count");
+
+function updateCount(){
+
+    const visible =
+    document.querySelectorAll(
+    ".gallery-card:not(.hide)"
+    ).length;
+
+    count.innerText =
+    `Showing ${visible} Projects`;
+}
+
+function filterProjects(category){
+
+    cards.forEach(card => {
+
+        if(
+            category === "all" ||
+            card.classList.contains(category)
+        ){
+            card.classList.remove("hide");
+        }
+        else{
+            card.classList.add("hide");
+        }
+
+    });
+
+    updateCount();
+}
+
+updateCount();
 fetch("projects.json")
 
 .then(response => response.json())
@@ -9,15 +42,14 @@ fetch("projects.json")
 .then(projects => {
 
     document.getElementById(
-        "count"
-    ).innerHTML =
+        "repo-count"
+    ).innerText =
 
-    `Total Projects: ${projects.length}`;
+    `Total Repositories: ${projects.length}`;
 
     const container =
-
     document.getElementById(
-        "projects-container"
+        "repo-container"
     );
 
     container.innerHTML = "";
@@ -32,86 +64,24 @@ fetch("projects.json")
         card.className =
         "project-card";
 
-        card.innerHTML =
+        card.innerHTML = `
 
-        `
-        <h3>
-        ${project.name}
-        </h3>
+            <h3>${project.name}</h3>
 
-        <p>
-        ${project.description || "No Description"}
-        </p>
+            <p>
+            ${project.description || "No Description"}
+            </p>
 
-        <a href="${project.url}" target="_blank">
-        Open Repository
-        </a>
+            <a href="${project.url}"
+               target="_blank">
+
+               View Repository
+
+            </a>
         `;
 
-        container.appendChild(
-            card
-        );
+        container.appendChild(card);
 
     });
-
-})
-
-.catch(error => {
-
-    console.log(error);
-
-});
-
-// ====================
-// NEWS HEADLINES
-// ====================
-
-fetch("news.json")
-
-.then(response => response.json())
-
-.then(news => {
-
-    const container =
-
-    document.getElementById(
-        "news-container"
-    );
-
-    container.innerHTML = "";
-
-    const card =
-    document.createElement(
-        "div"
-    );
-
-    card.className =
-    "project-card";
-
-    let html = "<ul>";
-
-    news.forEach(item => {
-
-        html += `
-        <li>
-        ${item}
-        </li>
-        `;
-
-    });
-
-    html += "</ul>";
-
-    card.innerHTML = html;
-
-    container.appendChild(
-        card
-    );
-
-})
-
-.catch(error => {
-
-    console.log(error);
 
 });
