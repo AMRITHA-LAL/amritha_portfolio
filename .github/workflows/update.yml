@@ -1,22 +1,53 @@
 name: Update Portfolio
 
 on:
-  push:
+
+  schedule:
+    - cron: "0 * * * *"
+
+  workflow_dispatch:
 
 jobs:
+
   update:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
 
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
 
         with:
           python-version: "3.14"
 
-      - run: pip install -r requirements.txt
+      - name: Install Packages
+        run: |
 
-      - run: python github_fetch.py
+          pip install requests
+          pip install beautifulsoup4
+
+      - name: Update GitHub Projects
+        run: python github_fetch.py
+
+      - name: Update News
+        run: python news_fetch.py
+
+      - name: Commit Changes
+
+        run: |
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add .
+
+          git diff --cached --quiet || git commit -m "Auto update portfolio"
+
+          git push
