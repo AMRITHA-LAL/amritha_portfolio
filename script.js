@@ -2,7 +2,7 @@
 // GITHUB PROJECTS
 // ====================
 
-fetch("projects.json")
+fetch("../projects.json")
 
 .then(response => response.json())
 
@@ -60,7 +60,7 @@ fetch("projects.json")
 // NEWS HEADLINES
 // ====================
 
-fetch("news.json")
+fetch("../news.json")
 
 .then(response => response.json())
 
