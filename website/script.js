@@ -1,6 +1,4 @@
-// ====================
-// GITHUB PROJECTS
-// ====================
+// PROJECTS
 
 fetch("projects.json")
 
@@ -8,57 +6,40 @@ fetch("projects.json")
 
 .then(projects => {
 
-    document.getElementById(
-        "count"
-    ).innerHTML =
-
-    `Total Projects: ${projects.length}`;
-
     const container =
-
     document.getElementById(
-        "projects-container"
+    "projects-container"
     );
 
-    container.innerHTML = "";
+    document.getElementById(
+    "count"
+    ).innerHTML =
+    `Total Projects: ${projects.length}`;
 
     projects.forEach(project => {
 
         const card =
-        document.createElement(
-            "div"
-        );
+        document.createElement("div");
 
         card.className =
         "project-card";
 
-        card.innerHTML =
-
-        `
-        <h3>
-        ${project.name}
-        </h3>
-
-        <p>
-        ${project.description || "No Description"}
-        </p>
-
+        card.innerHTML = `
+        <h3>${project.name}</h3>
+        <p>${project.description || "No Description"}</p>
         <a href="${project.url}" target="_blank">
         Open Repository
         </a>
         `;
 
-        container.appendChild(
-            card
-        );
+        container.appendChild(card);
 
     });
 
 });
 
-// ====================
-// NEWS HEADLINES
-// ====================
+
+// NEWS
 
 fetch("news.json")
 
@@ -67,39 +48,24 @@ fetch("news.json")
 .then(news => {
 
     const container =
-
     document.getElementById(
-        "news-container"
+    "news-container"
     );
 
-    container.innerHTML = "";
-
-    const card =
-    document.createElement(
-        "div"
-    );
-
-    card.className =
-    "news-list";
-
-    let html = "<ul>";
+    const list =
+    document.createElement("ul");
 
     news.forEach(item => {
 
-        html += `
-        <li>
-        ${item}
-        </li>
-        `;
+        const li =
+        document.createElement("li");
+
+        li.textContent = item;
+
+        list.appendChild(li);
 
     });
 
-    html += "</ul>";
-
-    card.innerHTML = html;
-
-    container.appendChild(
-        card
-    );
+    container.appendChild(list);
 
 });
