@@ -1,0 +1,3 @@
+print(
+"Email automation ready"
+)
