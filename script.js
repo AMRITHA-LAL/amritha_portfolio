@@ -85,3 +85,67 @@ fetch("projects.json")
     });
 
 });
+let currentSlide = 0;
+
+
+const slides = document.querySelectorAll(".slide");
+
+
+const titles = [
+    "Login Screen",
+    "Home Dashboard",
+    "Tasks Management",
+    "Calendar",
+    "AI Assistant Interface",
+    "User Profile"
+];
+
+
+function showSlide(index){
+
+    slides.forEach(slide=>{
+        slide.classList.remove("active");
+    });
+
+
+    slides[index].classList.add("active");
+
+
+    document.getElementById("slide-title").innerHTML =
+    titles[index];
+
+}
+
+
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+}
+
+
+
+function previousSlide(){
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length-1;
+    }
+
+    showSlide(currentSlide);
+
+}
+
+
+
+// Automatic slideshow
+
+setInterval(nextSlide,4000);
