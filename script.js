@@ -148,4 +148,4 @@ function previousSlide(){
 
 // Automatic slideshow
 
-setInterval(nextSlide,4000);
+setInterval(nextSlide,10000);
