@@ -519,3 +519,70 @@ margin-top:30px;
     width: 100%;
 
 }
+.flutter-slider {
+
+    width:100%;
+    max-width:450px;
+    height:650px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+
+.slide {
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:none;
+
+}
+
+
+.slide.active {
+
+    display:block;
+
+}
+
+
+
+.slide-caption {
+
+    text-align:center;
+
+}
+
+
+
+.slider-buttons {
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+
+.slider-buttons button {
+
+    padding:10px 20px;
+
+    margin:5px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
