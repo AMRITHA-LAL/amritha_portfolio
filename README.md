@@ -32,7 +32,7 @@ Features:
 - AI-inspired Assistant Interface
 
 Technologies:
-https://amritha-lal.github.io/amritha_portfolio/tideai.html
+
 - Flutter
 - Dart
 - Figma
