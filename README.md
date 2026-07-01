@@ -1,6 +1,5 @@
 # Amritha Lal - Personal Developer Portfolio 🚀
 
-![Portfolio Banner](portfolio-home.jpeg)
 
 A personal developer portfolio website built to showcase my skills, projects, learning journey, and software development experiments.
 
@@ -22,7 +21,6 @@ https://amritha-lal.github.io/amritha_portfolio/
 
 ## TIDE-AI Productivity Application
 
-<img src="tideai-cover.jpeg" width="500">
 
 TIDE-AI is a productivity and task management mobile application concept designed using Figma and implemented using Flutter.
 
