@@ -96,9 +96,9 @@ I enjoy building practical projects while continuously improving my technical sk
 
 ---
 
-# ✨ Project Overview
+# ✨ Portfolio Overview
 
-Smart Portfolio Automation is a personal portfolio website designed to present:
+Amritha Lal- Personal Developer Portfolio is a personal portfolio website designed to present:
 
 - My technical skills
 - Projects and prototypes
@@ -164,32 +164,31 @@ github_fetch.py
 # 📂 Project Structure
 
 ```
-portfolio/
+amritha_portfolio/
 
 │
-├── index.html              # Main portfolio webpage
-├── style.css               # Website styling
-├── script.js               # JavaScript functionality
+├── index.html                 # Main portfolio webpage
+├── tideai.html                # TIDE-AI detailed project page
 │
-├── profile.jpeg            # Profile image
+├── style.css                  # Website styling
+├── script.js                  # JavaScript functionality
 │
-├── projects.json           # Project data
+├── profile.jpeg               # Profile image
 │
-├── email_sender.py         # Email automation script
-├── github_fetch.py         # GitHub data fetching script
-├── news_fetch.py           # News fetching script
-├── weather_alert.py        # Weather automation script
+├── portfolio-home.jpeg        # Portfolio preview image
 │
-├── requirements.txt        # Python dependencies
+├── tideai-cover.jpeg          # TIDE-AI project cover image
+├── tideai-demo.webm           # TIDE-AI application demo video
 │
-└── .github/
-    └── workflows/
-        ├── news.yml
-        ├── weather.yml
-        └── portfolio.yml
+├── login.jpeg                 # TIDE-AI login screen
+├── home.jpeg                  # TIDE-AI home dashboard screen
+├── task.jpeg                  # TIDE-AI task management screen
+├── calendar.jpeg              # TIDE-AI calendar screen
+├── AI.jpeg                    # TIDE-AI assistant interface screen
+├── profile-page.jpeg          # TIDE-AI user profile screen
+│
+└── README.md                  # Project documentation
 ```
-
----
 
 # ⚙️ GitHub Actions
 
