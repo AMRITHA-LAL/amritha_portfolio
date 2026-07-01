@@ -2,16 +2,84 @@
 
 ![Portfolio Banner](portfolio-home.jpeg)
 
-A personal developer portfolio website built to showcase my skills, projects, learning journey, and experiments in software development.
-
 A personal developer portfolio website built to showcase my skills, projects, learning journey, and software development experiments.
 
 The project also includes Python automation experiments and GitHub Actions workflows demonstrating CI/CD concepts.
+
+---
+
+# 🌐 Portfolio Preview
+
+<img src="portfolio-home.jpeg" width="800">
 
 🌐 **Live Website:**  
 https://amritha-lal.github.io/amritha_portfolio/
 
 ---
+---
+
+# 🌊 Featured Project
+
+## TIDE-AI Productivity Application
+
+<img src="tideai-cover.jpeg" width="500">
+
+TIDE-AI is a productivity and task management mobile application concept designed using Figma and implemented using Flutter.
+
+Features:
+
+- Task Management
+- Calendar Management
+- Productivity Tracking
+- AI-inspired Assistant Interface
+
+Technologies:
+
+- Flutter
+- Dart
+- Figma
+
+Project Details:
+
+https://amritha-lal.github.io/amritha_portfolio/tideai.html
+---
+
+# 📱 TIDE-AI Application Screens
+
+The Flutter implementation of TIDE-AI includes multiple screens demonstrating the application workflow and user interface design.
+
+<div align="center">
+
+### 🔐 Login Screen
+
+<img src="login.jpeg" width="250">
+
+
+### 🏠 Home Dashboard
+
+<img src="home.jpeg" width="250">
+
+
+### 📋 Task Management
+
+<img src="task.jpeg" width="250">
+
+
+### 📅 Calendar Management
+
+<img src="calendar.jpeg" width="250">
+
+
+### 🤖 AI Assistant Interface
+
+<img src="AI.jpeg" width="250">
+
+
+### 👤 User Profile
+
+<img src="profile-page.jpeg" width="250">
+
+</div>
 
 ## 👩‍💻 About Me
 
@@ -69,28 +137,7 @@ github_fetch.py
 ```
 
 ---
-# 🌊 Featured Project
 
-## TIDE-AI Productivity Application
-
-TIDE-AI is a productivity and task management mobile application concept designed using Figma and implemented using Flutter.
-
-Features:
-
-- Task Management
-- Calendar Organization
-- Productivity Tracking
-- AI-inspired Assistant Interface
-
-Technologies:
-
-- Flutter
-- Dart
-- Figma
-
-Project Details:
-
-https://amritha-lal.github.io/amritha_portfolio/tideai.html
 # 🛠 Technologies Used
 
 ## Frontend
@@ -115,50 +162,7 @@ https://amritha-lal.github.io/amritha_portfolio/tideai.html
 - Figma
 
 ---
-# 📸 Project Screenshots
 
-## 🌐 Portfolio Website
-
-<p align="center">
-<img src="portfolio-home.jpeg" width="750">
-</p>
-
-
----
-
-## 🌊 TIDE-AI Mobile Application
-
-
-<p align="center">
-
-<img src="tideai-cover.jpeg" width="350">
-
-</p>
-
-
-### Application Screens
-
-
-<p align="center">
-
-<img src="login.jpeg" width="200">
-
-<img src="home.jpeg" width="200">
-
-<img src="task.jpeg" width="200">
-
-</p>
-
-
-<p align="center">
-
-<img src="calendar.jpeg" width="200">
-
-<img src="AI.jpeg" width="200">
-
-<img src="profile-page.jpeg" width="200">
-
-</p>
 # 📂 Project Structure
 
 ```
