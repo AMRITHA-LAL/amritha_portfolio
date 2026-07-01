@@ -586,3 +586,79 @@ margin-top:30px;
     cursor:pointer;
 
 }
+.flutter-slider {
+
+width:100%;
+
+max-width:420px;
+
+height:700px;
+
+margin:40px auto;
+
+overflow:hidden;
+
+border-radius:25px;
+
+background:#111827;
+
+}
+
+
+
+.slide {
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+display:none;
+
+}
+
+
+
+.slide.active {
+
+display:block;
+
+}
+
+
+
+.slide-caption {
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+
+.slider-buttons {
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+.slider-buttons button {
+
+padding:12px 25px;
+
+margin:5px;
+
+border:none;
+
+border-radius:25px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
