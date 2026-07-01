@@ -1,4 +1,4 @@
-# Amritha Lal - Personal Developer Portfolio 🚀
+# Personal Developer Portfolio 🚀
 
 
 A personal developer portfolio website built to showcase my skills, projects, learning journey, and software development experiments.
@@ -98,7 +98,7 @@ I enjoy building practical projects while continuously improving my technical sk
 
 # ✨ Portfolio Overview
 
-Amritha Lal- Personal Developer Portfolio is a personal portfolio website designed to present:
+Personal Developer Portfolio is a personal portfolio website designed to present:
 
 - My technical skills
 - Projects and prototypes
