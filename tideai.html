@@ -234,91 +234,78 @@ allowfullscreen>
 
 <section>
 
-
 <h2>Flutter Application Screens</h2>
 
+
 <div class="project-card">
-<div class="flutter-gallery">
+
+
+<div class="flutter-slider">
+
+
+<img src="login.jpeg" 
+class="slide active"
+alt="TIDE AI Login Screen">
+
+
+<img src="home.jpeg"
+class="slide"
+alt="TIDE AI Home Screen">
+
+
+<img src="task.jpeg"
+class="slide"
+alt="TIDE AI Task Screen">
+
+
+<img src="calendar.jpeg"
+class="slide"
+alt="TIDE AI Calendar Screen">
+
+
+<img src="AI.jpeg"
+class="slide"
+alt="TIDE AI Assistant Screen">
+
+
+<img src="profile-page.jpeg"
+class="slide"
+alt="TIDE AI Profile Screen">
+
+
+</div>
 
 
 
-<div class="app-screen">
+<div class="slide-caption">
 
-<img src="login.jpeg">
-
-<h4>
+<h3 id="screen-title">
 Login Screen
-</h4>
+</h3>
 
 </div>
 
 
 
-<div class="app-screen">
+<div class="slider-buttons">
 
-<img src="home.jpeg">
-
-<h4>
-Home Dashboard
-</h4>
-
-</div>
+<button onclick="previousScreen()">
+⬅ Previous
+</button>
 
 
-
-<div class="app-screen">
-
-<img src="task.jpeg">
-
-<h4>
-Task Management
-</h4>
-
-</div>
-
-
-
-<div class="app-screen">
-
-<img src="calendar.jpeg">
-
-<h4>
-Calendar
-</h4>
-
-</div>
-
-
-
-<div class="app-screen">
-
-<img src="AI.jpeg">
-
-<h4>
-AI Assistant Interface
-</h4>
-
-</div>
-
-
-
-<div class="app-screen">
-
-<img src="profile-page.jpeg">
-
-<h4>
-Profile
-</h4>
-
-</div>
+<button onclick="nextScreen()">
+Next ➡
+</button>
 
 
 </div>
+
+
 </div>
 
 
 </section>
-
 
 
 
@@ -439,7 +426,99 @@ LinkedIn
 
 </section>
 
+<script>
 
+let currentScreen = 0;
+
+
+const screens = document.querySelectorAll(".slide");
+
+
+const screenNames = [
+
+"Login Screen",
+
+"Home Dashboard",
+
+"Task Management",
+
+"Calendar",
+
+"AI Assistant Interface",
+
+"Profile"
+
+];
+
+
+
+function showScreen(index){
+
+
+screens.forEach(screen => {
+
+screen.classList.remove("active");
+
+});
+
+
+screens[index].classList.add("active");
+
+
+document.getElementById("screen-title").innerHTML =
+screenNames[index];
+
+
+}
+
+
+
+function nextScreen(){
+
+
+currentScreen++;
+
+
+if(currentScreen >= screens.length){
+
+currentScreen = 0;
+
+}
+
+
+showScreen(currentScreen);
+
+
+}
+
+
+
+function previousScreen(){
+
+
+currentScreen--;
+
+
+if(currentScreen < 0){
+
+currentScreen = screens.length-1;
+
+}
+
+
+showScreen(currentScreen);
+
+
+}
+
+
+
+// automatic slideshow
+
+setInterval(nextScreen,4000);
+
+
+</script>
 
 </body>
 
